@@ -1,6 +1,6 @@
 const frindsWithJor = (arr) => {
   let newArr = [];
-  for (name of friends) {
+  for (name of arr) {
     if (name.length % 2 == 0) {
       newArr.push(name);
     }
@@ -16,6 +16,13 @@ const friends = [
   "salma",
   "himu",
 ];
-console.log(frindsWithJor(...friends));
-
-const myMathWork = (arr) => {};
+const fitterFriendsByEvenLength = [
+  "Alice",
+  "Bob",
+  "Charlie",
+  "David",
+  "Emma",
+  "bill",
+];
+// console.log(frindsWithJor(...friends));
+console.log(frindsWithJor(fitterFriendsByEvenLength));

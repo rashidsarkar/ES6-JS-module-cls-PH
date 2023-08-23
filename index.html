@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Object Selling Example</title>
+</head>
+
+<body>
+  <h1>Object for Sale</h1>
+  <p>This is an example of selling an object using JavaScript.</p>
+  <p>Price: $100</p>
+  <button id="buyButton">Buy Now</button>
+  <p id="message"></p>
+
+  <script>
+    // Object details
+    const objectPrice = 100;
+
+    // Accessing the button and message elements
+    const buyButton = document.getElementById("buyButton");
+    const message = document.getElementById("message");
+
+    // Event listener for the Buy Now button
+    buyButton.addEventListener("click", () => {
+      // Simulate a purchase
+      const userMoney = parseFloat(prompt("Enter your available money:"));
+
+      if (isNaN(userMoney)) {
+        message.textContent = "Invalid input. Please enter a valid amount.";
+      } else {
+        if (userMoney >= objectPrice) {
+          message.textContent = "Purchase successful! Enjoy your new object.";
+        } else {
+          message.textContent = "Insufficient funds. You need more money to buy this object.";
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
